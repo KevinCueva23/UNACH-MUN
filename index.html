@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <!-- AUTORES -->
+    <meta name="author" content="UNACHMUN" />
+    <!-- COPYRIGHT -->
+    <meta name="copyright" content="UNACHMUN" />
+    <title>UNACH MUN</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:400,500,600%7CTeko:300,400,500%7CMaven+Pro:500">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container"><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <div id="home">
+        <!-- Page Header-->
+        <header class="section page-header">
+          <!-- RD Navbar-->
+          <div class="rd-navbar-wrap">
+            <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+              <div class="rd-navbar-main-outer">
+                <div class="rd-navbar-main">
+                  <!-- RD Navbar Panel-->
+                  <div class="rd-navbar-panel">
+                    <!-- RD Navbar Toggle-->
+                    <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                    <!-- RD Navbar Brand-->
+                    <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="images/logogeneral.png" alt="" width="8" height="8"/> <h5 class="brand">       UNACH MUN</h5></a></div>
+                   
+                      
+                  </div>
+                  <div class="rd-navbar-main-element">
+                    <div class="rd-navbar-nav-wrap">
+                      <!-- RD Navbar Share-->
+                      <div class="rd-navbar-share fl-bigmug-line-share27" data-rd-navbar-toggle=".rd-navbar-share-list">
+                        <ul class="list-inline rd-navbar-share-list">
+                          <li class="rd-navbar-share-list-item"><a class="icon fa fa-facebook" href="#"></a></li>
+                          <li class="rd-navbar-share-list-item"><a class="icon fa fa-google-plus" href="#"></a></li>
+                          <li class="rd-navbar-share-list-item"><a class="icon fa fa-instagram" href="https://www.instagram.com/unach_mun/"></a></li>
+                        </ul>
+                      </div>
+                      <ul class="rd-navbar-nav">
+                        <li class="rd-nav-item active"><a class="rd-nav-link" href="#home">INICIO</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#services">QUIÉNES SOMOS</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#organizadores">COMITÉ ORGANIZADOR</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#cronograma">CRONOGRAMA</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#precios">INSCRIPCIÓN</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#contactanos">CONTACTENOS</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#ubicacion">UBICACIÓN</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+
+        <div id="countdown"></div>
+          
+    <script>
+        
+        // Fecha objetivo (5 de junio de este año)
+        var targetDate = new Date('June 5, 2024 00:00:00').getTime();
+
+        // Actualiza el cronómetro cada segundo
+        var countdown = setInterval(function() {
+
+            // Obtiene la fecha y hora actual
+            var now = new Date().getTime();
+
+            // Calcula la diferencia entre la fecha objetivo y la fecha actual
+            var distance = targetDate - now;
+
+            // Calcula los días, horas, minutos y segundos restantes
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Actualiza el elemento HTML con el tiempo restante
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            // Si el contador llega a cero, detén el cronómetro
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById("countdown").innerHTML = "¡Ya ha llegado!";
+            }
+        }, 1000);
+
+        
+        
+        </script>
+          
+          
+          
+        <!-- Swiper-->
+        <section class="section swiper-container swiper-slider swiper-slider-classic" data-loop="true" data-autoplay="4859" data-simulate-touch="true" data-direction="vertical" data-nav="false">
+          <div class="swiper-wrapper text-center">
+            <div class="swiper-slide" data-slide-bg="images/fondoonu2.png">
+              <div class="swiper-slide-caption section-md">
+                <div class="container">
+                <h1 style="color: black; font-weight: bold;">MODELO DE NACIONES UNIDAS UNACH MUN <span style="color: #ff0000;">2024</span></h1>
+                <p><img src="images/icons8-calendario-50.png" alt="Ícono de calendario" width="20px"> 5, 6, 7 de Junio <img src="images/icons8-gps-50.png" alt="Ícono de lugar" width="20px"> Universidad Nacional de Chimborazo</p>
+                <a class="button button-primary button-ujarak" href="https://forms.gle/zsgF9VbitTqYk8HW8" style="background-color: #1F5971; border: 2px solid #F0EBCE; color: white;">INSCRIBIRSE</a>
+                    
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="images/Nosotros.png">
+                      <div class="swiper-slide-caption section-md">
+                <div class="container">
+                <h1 style="color: white; font-weight: bold;">MODELO DE NACIONES UNIDAS UNACH MUN <span style="color: #ff0000;">2024</span></h1>
+                <p style="color: white; font-weight: bold;">
+                    <img src="images/icons8-calendario-50.png" alt="Ícono de calendario" width="20px" style="filter: brightness(0) invert(1);">
+                    5, 6, 7 de Junio
+                    <img src="images/icons8-gps-50.png" alt="Ícono de lugar" width="20px" style="filter: brightness(0) invert(1);">
+                    Universidad Nacional de Chimborazo
+                </p>
+                <a class="button button-primary button-ujarak" href="https://forms.gle/zsgF9VbitTqYk8HW8" style="background-color: #1F5971; border: 2px solid #F0EBCE; color: white;">INSCRIBIRSE</a>
+                </div>
+              </div>
+            </div>
+              
+              
+            <div class="swiper-slide">
+              
+                <video autoplay loop muted playsinline height="500px" width="400px"> <source src="videos/videonosoo.mp4" type="video/mp4"></video>
+               <div class="swiper-slide-caption section-md">
+                <div class="container">
+                <h1 style="color: #1F5971; font-weight: bold;">MODELO DE NACIONES UNIDAS UNACH MUN <span style="color: #ff0000;">2024</span></h1>
+                <p ><img src="images/icons8-calendario-50.png" alt="Ícono de calendario" width="20px"> 5, 6, 7 de Junio <img src="images/icons8-gps-50.png" alt="Ícono de lugar" width="20px"> Universidad Nacional de Chimborazo</p>
+                <a class="button button-primary button-ujarak" href="https://forms.gle/zsgF9VbitTqYk8HW8" style="background-color: #1F5971; border: 2px solid #F0EBCE; color: white;">INSCRIBIRSE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper Pagination-->
+          <div class="swiper-pagination__module">
+            <div class="swiper-pagination__fraction"><span class="swiper-pagination__fraction-index">00</span><span class="swiper-pagination__fraction-divider">/</span><span class="swiper-pagination__fraction-count">00</span></div>
+            <div class="swiper-pagination__divider"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+
+          
+          
+                <!-- Línea de División-->
+        
+         <div class="content-divider"></div>
+          
+      </div>
+        
+    <br>
+
+    
+      <!-- See all services-->
+     <section class="section section-sm section-first bg-default text-center" id="services">
+        <div class="container">
+          <div class="row row-30 justify-content-center">
+              <div class="col-md-7 col-lg-2 col-xl-5 text-lg-left wow fadeInUp" style="display: flex; justify-content: center; align-items: center;">
+                        <img class="imgnaciones" src="images/Onu.jpeg" alt="" width="800" height="700"/>
+                    </div>
+
+             <div class="text-container">
+                <h2>¿Qué es un Modelo de Naciones Unidas?</h2>
+                <p>Un Modelo de Naciones Unidas, comúnmente abreviado como MNU o MUN por sus siglas en inglés (Model United Nations), es una simulación académica y educativa de las Naciones Unidas. En un Modelo de Naciones Unidas, estudiantes de diferentes instituciones representan a países miembros de la ONU y debaten sobre temas de interés internacional, siguiendo procedimientos similares a los utilizados por la ONU real. Estos eventos suelen tener lugar en conferencias o competiciones, donde los participantes asumen roles diplomáticos, representan los intereses de los países que les han sido asignados y trabajan juntos para resolver problemas globales, negociar tratados, redactar resoluciones y desarrollar políticas internacionales. Los Modelos de Naciones Unidas son valiosos para el desarrollo de habilidades de liderazgo, negociación, resolución de problemas, oratoria, trabajo en equipo y conocimiento sobre asuntos internacionales.</p>
+              <br>  <br>
+              
+              
+              
+              </div>  
+          </div>
+            
+            
+        </div>
+           
+         
+        
+        
+        <div class="container">
+            
+        <div class="col-md-6">
+         <h2 id="titulomvo">Misión, Visión y Objetivos</h2>
+         </div>
+            
+            
+            
+            <div class="row row-30 justify-content-center">
+             
+                <div>
+                    <div class="text-container">
+                        <h3>Misión:</h3>
+                        <p>• Facilitar un espacio educativo y dinámico donde los participantes puedan simular y comprender el funcionamiento de la diplomacia internacional a través de la representación de los países miembros de las Naciones Unidas.</p>
+                        <p>• Fomentar el desarrollo de habilidades de liderazgo, comunicación, negociación y resolución de conflictos entre los jóvenes estudiantes.</p>
+                        <p>• Promover el entendimiento y la conciencia sobre temas globales y la importancia del multilateralismo y la cooperación internacional.</p>
+                    </div>
+                </div>
+                   <div class="col-md-7 col-lg-2 col-xl-5 text-lg-left wow fadeInUp" style="display: flex; justify-content: center; align-items: center;">
+                    <img class="imgnaciones" src="images/personas/IMG_0278.JPG" width="350" alt="">
+                </div>
+            </div>
+
+          <div class="row row-30 justify-content-center">
+              <div class="col-md-7 col-lg-2 col-xl-5 text-lg-left wow fadeInUp" style="display: flex; justify-content: center; align-items: center;">
+                        <img class="imgnaciones" src="images/Vision.jpg" alt="" width="300" height="700"/>
+                    </div>
+
+             <div class="text-container">
+               <h3>Visión:</h3>
+                    <p>• Ser reconocidos como una plataforma líder en la organización de simulaciones de las Naciones Unidas, que inspiren a los participantes a convertirse en agentes de cambio y líderes globales en sus comunidades y carreras futuras.</p>
+                    <p>• Establecer un entorno inclusivo y diverso que fomente el intercambio de ideas y la construcción de relaciones entre estudiantes de diferentes culturas y contextos.</p>
+              
+              </div>  
+          </div>
+        
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="bottom-container">
+                    <h2>Objetivos</h2>
+                    <div class="cronograma-container"><div class="linea"></div><div class="marcador-rosa"></div></div>
+                      
+                      
+                    <ul>
+                      <li>• Proporcionar a los participantes una comprensión profunda de los procedimientos y estructuras de las Naciones Unidas, así como de los desafíos globales que enfrenta la comunidad internacional.</li>
+                      <li>• Fomentar el pensamiento crítico y la capacidad de investigación en los participantes, a través del análisis de problemas complejos y la búsqueda de soluciones viables y sostenibles.</li>
+                      <li>• Inculcar valores de respeto, tolerancia y cooperación entre los participantes, promoviendo un diálogo constructivo y el trabajo en equipo.</li>
+                      <li>• Brindar una experiencia memorable y enriquecedora que motive a los participantes a comprometerse con temas globales y a asumir roles activos en la construcción de un mundo más justo y sostenible.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+         </div>
+      </section>
+
+    
+         <!-- Línea de División-->
+         <div class="content-divider"></div>
+ 
+
+        <section class="section section-sm section-first bg-default text-center" id="organizadores">
+            
+            <h2>Comité Organizador</h2>
+    
+             <div class="cronograma-container"><div class="linea"></div><div class="marcador-rosa"></div></div>
+                    <div class="container-fluid">
+          <div class="row row-sm row-30 justify-content-center">
+            <div class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a class="team-classic-figure" href="/site/nosotros.html#luis"><img src="images/personas/Luis.png" alt="" width="420" height="100"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="/site/nosotros.html#luis">Luis Coloma Vallejo</a></h4>
+                  <p class="team-classic-status">Secretario General</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight" data-wow-delay=".1s">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a class="team-classic-figure" href="/site/nosotros.html#pamela"><img src="images/personas/Pame.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="/site/nosotros.html#pamela">Pamela Andrade Panata</a></h4>
+                  <p class="team-classic-status">Directora Académica</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight" data-wow-delay=".2s">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a class="team-classic-figure" href="/site/nosotros.html#gaby"><img src="images/personas/gaby.png" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="/site/nosotros.html#gaby">Gabriela Jara Basantes</a></h4>
+                  <p class="team-classic-status">Directora de Relaciones Públicas</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight" data-wow-delay=".3s">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a class="team-classic-figure" href="/site/nosotros.html#vane"><img src="images/personas/Vane.png" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="/site/nosotros.html#vane">Vanessa Huilca Guevara</a></h4>
+                  <p class="team-classic-status">Directora de Comunicación y Prensa</p>
+                </div>
+              </article>
+            </div>
+              
+            <div class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight" data-wow-delay=".3s">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a class="team-classic-figure" href="/site/nosotros.html#melwin"><img src="images/personas/Melwin.png" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="/site/nosotros.html#melwin">Melwin  Gavilanes Gavilanez</a></h4>
+                  <p class="team-classic-status">Director de Logística</p>
+                </div>
+              </article>
+            </div>
+              
+            <div class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight" data-wow-delay=".3s">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a class="team-classic-figure" href="/site/nosotros.html#kevin"><img src="images/personas/david.png" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="/site/nosotros.html#kevin">Kevin Cueva Bonilla</a></h4>
+                  <p class="team-classic-status">Director de Segurirad</p>
+                </div>
+              </article>
+            </div>
+              
+              
+              
+          </div>
+        </div>
+             
+             
+
+           <!-- <div class="row h-100">
+                <div class="col-lg-2 align-self-center">
+    <img class="img-fluid rounded-circle p-3" src="images/personas/Luis.png" style="width: 240px; height: 260px;">
+</div>
+
+                <div class="col-lg-8">
+                <p><strong>Secretario general</strong></p>
+
+                <p><em>Juan Pérez, un estudiante de 22 años de la Universidad Nacional de Ingeniería (UNI) en Lima, Perú, se destaca por su pasión por la ingeniería civil y la construcción, participando en proyectos de investigación sobre ingeniería sísmica y infraestructura sostenible. Además, es un apasionado del fútbol y la música, habiendo representado a su universidad en torneos deportivos y dedicando su tiempo libre a tocar la guitarra. Durante un semestre, participó en un programa de intercambio estudiantil en la Universidad de California, Berkeley, ampliando sus horizontes académicos y colaborando en investigaciones sobre ingeniería de materiales y sistemas de transporte urbano. En su comunidad universitaria, ha sido presidente del Club de Ingeniería Civil, organizando eventos para promover la colaboración entre estudiantes, y ha participado como voluntario en programas de construcción de viviendas para familias de bajos recursos en zonas rurales de Perú.</p>
+            </div>
+            </div>-->
+            
+            
+            
+             
+        </section>
+        
+                 <!-- Línea de División-->
+         <div class="content-divider"></div>
+     
+
+        
+       <!-- Cronograma --> 
+       <section class="section section-sm section-first bg-default text-center" id="cronograma">
+        <div class="container">
+            <h2>Cronograma</h2>
+    
+             <div class="cronograma-container"><div class="linea"></div><div class="marcador-rosa"></div></div>
+          <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+            <div class="col-lg-6 col-xl-5 wow fadeInLeft">
+              <h2>Días</h2>
+              <!-- Bootstrap tabs-->
+              <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                <!-- Nav tabs-->
+                <ul class="nav nav-tabs">
+                  <li class="nav-item" role="presentation"><a class="nav-link nav-link-big active" href="#tabs-6-1" data-toggle="tab">05</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link nav-link-big" href="#tabs-6-2" data-toggle="tab">06</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link nav-link-big" href="#tabs-6-3" data-toggle="tab">07</a></li>
+                </ul>
+                <!-- Tab panes-->
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="tabs-6-1">
+
+                     <div class="event">
+                        <div class="hour">17:00-21:00</div>
+                        <div class="description">Inauguración - Universidad Nacional de Chimborazo</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">17h00-17h30</div>
+                        <div class="description">Acreditación de Invitados - Salón de la Ciudad</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">17h30-19h30</div>
+                        <div class="description">Inauguración del Evento - Salón de la Ciudad</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">19h30-21h00</div>
+                        <div class="description">Cóctel y Ronda de Negociaciones - Salón de la Ciudad</div>
+                    </div>
+                      
+                      
+                    <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#modalCta" data-toggle="modal" id="botonubi">Ubicación</a></div>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-6-2">
+                    
+                    <div class="event">
+                        <div class="hour">8:00 - 18:30</div>
+                        <div class="description">Sesiones de debate - UNACH Campus Norte</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">08:00 - 11:00</div>
+                        <div class="description">Primera Sesión - UDA Campus Central</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">11:00 - 11:30</div>
+                        <div class="description">Coffee Break - Restaurante</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">11:30 - 13:30</div>
+                        <div class="description">Segunda sesión de debate - UDA Campus Central</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">13:30 - 14:30</div>
+                        <div class="description">Almuerzo - UDACAFE</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">14:30 - 17:30</div>
+                        <div class="description">Tercera sesión de debate - UDA Campus Central</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">17:30 - 18:00</div>
+                        <div class="description">Coffee Break - Restaurante</div>
+                    </div>  
+                      
+                      
+                    <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#modalCta" data-toggle="modal" id="botonubi">Ubicación</a></div>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-6-3">
+                    <div class="event">
+                        <div class="hour">08:00 - 21:00</div>
+                        <div class="description">Sesiones de debate - UNACH Campus Norte</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">08:00 - 11:00</div>
+                        <div class="description">Primera Sesión - UDA Campus Central</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">11:00 - 11:30</div>
+                        <div class="description">Coffee Break - Patio de Ciencias Jurídicas</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">11:30 - 13:30</div>
+                        <div class="description">Segunda sesión de debate - UDA Campus Central</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">13:30 - 14:30</div>
+                        <div class="description">Almuerzo - Restaurante</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">14:30 - 17:30</div>
+                        <div class="description">Tercera sesión de debate - UDA Campus Central</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">17:30 - 18:00</div>
+                        <div class="description">Coffee Break - Patio de Ciencias Jurídicas</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">18:00 - 19:00</div>
+                        <div class="description">Reunión Comité Académico - Sala de Audiencias</div>
+                    </div>
+                    <div class="event">
+                        <div class="hour">19:00 - 21:00</div>
+                        <div class="description">Clausura y premiación - Auditorio General</div>
+                    </div>
+                    <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#modalCta" data-toggle="modal" id="botonubi">Ubicación</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+              <div class="owl-carousel owl-style-1" data-items="2" data-stage-padding="0" data-loop="true" data-margin="0" data-mouse-drag="true" data-autoplay="true"><a class="box-device" href="#"><img src="images/fondo0.png" alt="" width="313" height="580"/></a><a class="box-device" href="#"><img src="images/fondo1.png" alt="" width="313" height="580"/></a><a class="box-device" href="#"><img src="images/fondo2.png" alt="" width="313" height="580"/></a><a class="box-device" href="#"><img src="images/fondo3.png" alt="" width="313" height="580"/></a></div><!--313*580-->
+            </div>
+          </div>
+        </div>
+      </section>
+  
+        
+        
+
+      <!-- Years of experience-->
+      <section class="section section-sm bg-default" id="experiencia">
+        <div class="container">
+          <div class="row row-30 row-xl-24 justify-content-center align-items-center align-items-lg-start text-left">
+            <div class="col-md-6 col-lg-5 col-xl-4 text-center"><a class="text-img" href="#">
+                <div id="particles-js"></div><span class="counter">5</span></a></div>
+            <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+              <div class="text-width-extra-small offset-top-lg-24 wow fadeInUp">
+                <h3 class="title-decoration-lines-left">de junio - 07 de junio del 2024</h3>
+                <p class="text-gray-500">"Uniendo voces, construyendo un mundo mejor juntos."</p><a class="button button-secondary button-pipaluk" href="#">Get in touch</a>
+              </div>
+            </div>
+            <div class="col-sm-10 col-md-8 col-lg-6 col-xl-4 wow fadeInRight" data-wow-delay=".1s">
+              <div class="row justify-content-center border-2-column offset-top-xl-26">
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter">2</span><span class="symbol">k</span>
+                    </div>
+                    <h6 class="counter-amy-title">Personas llegadas</h6>
+                  </div>
+                </div>
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter">40</span>
+                    </div>
+                    <h6 class="counter-amy-title">Temas</h6>
+                  </div>
+                </div>
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter">12</span>
+                    </div>
+                    <h6 class="counter-amy-title">Premios</h6>
+                  </div>
+                </div>
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter">30</span>
+                    </div>
+                    <h6 class="counter-amy-title">Roles</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+              
+    <!-- Línea de División-->
+        
+    <div class="content-divider"></div>    
+        
+
+      <!-- Inscripción-->
+      <section class="section section-sm section-bottom-70 section-fluid bg-default" id="precios">
+        <div class="container">
+          <h3>Inscripción</h3>
+            <div class="cronograma-container"><div class="linea"></div><div class="marcador-rosa"></div></div>
+          <div class="row row-30 justify-content-center">
+    
+            <div class="col-md-6 col-lg-5 col-xl-4">
+              <div class="box-pricing box-pricing-black box-pricing-popular">
+                <div class="box-pricing-body">
+                  <h5 class="box-pricing-title">Totalmente gratuito</h5>
+                  <h3 class="box-pricing-price">$0</h3>
+                </div>
+                <div class="box-pricing-button"><a class="button button-lg button-block button-primary" href="https://forms.gle/zsgF9VbitTqYk8HW8">Inscribirme</a></div>
+                <div class="box-pricing-badge">popular</div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </section>
+        
+
+        
+        
+      <!-- Contact information-->
+      <section class="section section-sm bg-default" id="contactanos">
+        <div class="container">
+                       <h3>Contáctanos</h3>
+            <div class="cronograma-container"><div class="linea"></div><div class="marcador-rosa"></div></div>
+          <div class="row row-30 justify-content-center">
+ 
+            <div class="col-sm-8 col-md-6 col-lg-4">
+              <article class="box-contacts">
+                <div class="box-contacts-body">
+                  <div class="box-contacts-icon fl-bigmug-line-cellphone55"></div>
+                  <div class="box-contacts-decor"></div>
+                  <p class="box-contacts-link"><a href="https://wa.me/593988740198">+593 98 874 0198</a></p>
+                  <p class="box-contacts-link"><a href="https://wa.me/593980217445">+593 98 021 7445</a></p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-8 col-md-6 col-lg-4">
+              <article class="box-contacts">
+                <div class="box-contacts-body">
+                  <div class="box-contacts-icon fl-bigmug-line-up104"></div>
+                  <div class="box-contacts-decor"></div>
+                  <p class="box-contacts-link"><a href="#">Universidad Nacional de Chimborazo</a></p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-8 col-md-6 col-lg-4">
+              <article class="box-contacts">
+                <div class="box-contacts-body">
+                  <div class="box-contacts-icon fl-bigmug-line-chat55"></div>
+                  <div class="box-contacts-decor"></div>
+                  <p class="box-contacts-link"><a href="mailto:u.mun@unach.edu.ec">u.mun@unach.edu.ec</a></p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        
+        
+        
+      <!-- Contact Form-->
+      <section class="section section-sm section-last bg-default text-left" id="contacts">
+        <div class="container">
+          <article class="title-classic">
+            <div class="title-classic-title">
+              <h3>Escribenos:</h3>
+            </div>
+            <div class="title-classic-text">
+              <p>Si tienes alguna duda, simplemente rellena el formulario de contacto y te responderemos a la brevedad.</p>
+            </div>
+          </article><br>
+          
+           <div class="formulario-contacto contenedor" id="contactos">
+        <div class="informacion-contacto">
+            <p><i class="fas fa-map-marker-alt"></i>Universidad Nacional de Chimborazo - Campus Norte</p>
+            <p><i class="fas fa-envelope"></i>u.mun@unach.edu.ec</p>
+            <p><i class="fas fa-phone-alt"></i>+593988740198</p>
+            <p><i class="fas fa-phone-alt"></i>+593980217445</p>
+        </div>
+        
+
+            
+        <form class="formulario" target="_blank" action="https://formsubmit.co/u.mun@unach.edu.ec" method="POST">
+            
+            <div class="input-formulario">
+                <label for="nombre">Nombres</label>
+                <input type="text" name="name" placeholder="Nombre" id="nombre">
+            </div><br>
+
+            <div class="input-formulario">
+                <label for="correo">Correo</label>
+                <input type="email" name="email" placeholder="ejemplo@ejemplo.com" id="correo">
+            </div><br>
+                
+            <div class="input-formulario">
+                 <label for="subject">Asunto</label>
+            <input type="text" placeholder="Asunto" name="subject"><br>
+            </div><br>
+                
+            <div class="input-formulario">
+                <label for="comments">Comentarios</label>
+                <textarea name="comments" cols="15" rows="5"></textarea>
+            </div><br>
+                
+            <div class="btn-formulario">
+            
+                <input type="submit" class="btn btn-verde"  value="Enviar">
+            
+            <!--     Poner el link de la página      <input type="hidden" name="_next" value=""> -->
+ 
+            <input type="hidden" name="_captcha" value="false">
+            </div>
+         
+        </form>
+    </div>
+            
+            
+            
+            
+        </div>
+      </section>
+    
+   
+    <!-- Línea de División-->
+        
+    <div class="content-divider"></div>  
+
+      <!-- RD Google Map-->
+      <section class="section section-fluid" id="ubicacion">
+        
+            <section class="ubicacion contenedor" id="ubicacion">
+        
+       <div class="container">
+            <h3>Ubicación</h3>
+            <div class="cronograma-container"><div class="linea"></div><div class="marcador-rosa"></div></div>
+   
+        </div> 
+        
+        <p><strong>Fecha:</strong> 5, 6, 7 de junio de 2024</p>
+        <p><strong>Lugar:</strong> Auditorio de la Universidad Nacional de Chimborazo</p>
+                
+        <div class="contenido-ubicacion">
+              <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                    <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+                    var setting = {"query":"Universidad Nacional de Chimborazo, Avenida Antonio José de Sucre, Riobamba, Ecuador","width":829,"height":468,"satellite":true,"zoom":18,"placeId":"ChIJAW8dIxCo05ERYshRY8iK-Gc","cid":"0x67f88ac86351c862","coords":[-1.6535176,-78.64278999999999],"lang":"es","queryString":"Universidad Nacional de Chimborazo, Avenida Antonio José de Sucre, Riobamba, Ecuador","centerCoord":[-1.6535176,-78.64278999999999],"id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"1083199"};
+                    var d = document;
+                    var s = d.createElement('script');
+                    s.src = 'https://1map.com/js/script-for-user.js?embed_id=1083199';
+                    s.async = true;
+                    s.onload = function (e) {
+                      window.OneMap.initMap(setting)
+                    };
+                    var to = d.getElementsByTagName('script')[0];
+                    to.parentNode.insertBefore(s, to);
+                  })();</script><a href="https://1map.com/es/map-embed">1 Map</a></div>
+        </div>
+        
+  
+    </section>
+          
+          
+      </section>
+        
+        
+        
+            <!--Footer-->
+    
+    <div class="pie-pagina ">
+        <div class="contenedor-piepagina contenedor">
+            <div class="info">
+               <img src="images/logogeneral.png" width="150px" height="150px">
+            </div>
+            
+            <div class="info">
+                <h3><strong>Dirección:</strong></h3>
+                <p><a  href="https://maps.app.goo.gl/rLCEYKGxTLpwGnvb9">Universidad Nacional Chimborazo</a></p><br>
+               
+                <h3><strong>Sitio Web:</strong></h3>
+                <p><a href="https://www.unach.edu.ec/">UNACH</a></p>
+                
+            </div>
+            <div class="info">
+                <h3><strong>Contáctenos:</strong></h3>
+                <p><a href="contactos.html">Contactos MUN</a></p>
+         
+                <p><a href="https://www.unach.edu.ec/localizacion-en-el-mapa-ele/">Mapa y Dirección</a></p>
+                
+                <p><a href=" https://www.instagram.com/unach_mun/">Redes Sociales</a></p>
+            </div>
+            
+            <div class="info">
+                <h3><strong>Servicios Web:</strong></h3>
+                <p><a href="https://uvirtual.unach.edu.ec/">Unach Virtual</a></p>
+               <p><a href="https://www.unach.edu.ec/registro-de-red-inalambrica-ele/">Red Wifi</a></p> 
+               <p><a href="mailto:u.mun@unach.edu.ec">Correo</a></p>
+            </div>
+            <div class="info">
+                <h3><strong>Conecta:</strong></h3>
+                <p>Lunes - Domingo 7am - 20pm</p><br>
+                <div class="redes-sociales redes-pie">
+                    
+                    <center>
+                        <div class="iconos-sociales">
+                    
+
+                        <a href="https://www.instagram.com/unach_mun/" target="_blank"><img loading="lazy" alt="Sígueme en Instagram" height="35" width="35" src="https://img.icons8.com/ios/50/FFFFFF/instagram-new--v1.png" title="Sígueme en Instagram"/></a>
+
+                        <a href="https://wa.me/593988740198" target="_blank"><img loading="lazy" alt="Sígueme en WhatsApp" height="35" width="35" src="https://img.icons8.com/ios/50/FFFFFF/whatsapp--v1.png" title="Sígueme en WhatsApp"/></a>
+
+                        <a href="https://www.tiktok.com/unachmun" target="_blank"><img loading="lazy" alt="Sígueme en TikTok" height="35" width="35" src="https://img.icons8.com/ios/50/FFFFFF/tiktok--v1.png" title="Sígueme en TikTok"/></a>
+
+                        </div>
+                        </center>
+
+                         <!-- Aquí van los estilos -->
+                        <style>
+                        .iconos-sociales img{ 
+                        transition:all 0.5s ease-out; border-radius:50px;
+                        }
+                        .iconos-sociales img:hover{
+                        box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+                        transform:translate(0px, -10px); 
+                        }
+                        </style>
+                    
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    
+    <!--Derechos y footer final-->
+    
+    <footer class="footer">
+        <p>Todos los derechos reservados &copy; 2024 UNACH MUN - Desarrollado por: K.D.C.B</p>
+    </footer>
+ 
+
+      <!--<div class="modal fade" id="modalCta" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4>Contact Us</h4>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+              <form class="rd-form rd-form-variant-2 rd-mailform" data-form-output="form-output-global" data-form-type="contact-modal" method="post" action="bat/rd-mailform.php">
+                <div class="row row-14 gutters-14">
+                  <div class="col-12">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-modal-name" type="text" name="name" data-constraints="@Required">
+                      <label class="form-label" for="contact-modal-name">Your Name</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-modal-email" type="email" name="email" data-constraints="@Email @Required">
+                      <label class="form-label" for="contact-modal-email">E-mail</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-modal-phone" type="text" name="phone" data-constraints="@Numeric">
+                      <label class="form-label" for="contact-modal-phone">Phone</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-wrap">
+                      <label class="form-label" for="contact-modal-message">Message</label>
+                      <textarea class="form-input textarea-lg" id="contact-modal-message" name="message" data-constraints="@Required"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <button class="button button-primary button-pipaluk" type="submit">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>-->
+    
+  
+      </div>
+      
+  
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- coded by Himic-->
+  </body>
+</html>
